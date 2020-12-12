@@ -23,7 +23,6 @@ public class TextTransformerController {
         logger.debug(text);
         logger.debug(Arrays.toString(transforms));
 
-        // perform the transformation, you should run your logic here, below is just a silly example
         TextTransformer transformer = new TextTransformer(transforms);
         DataContener data = new DataContener();
         data.setText(text);
@@ -40,7 +39,6 @@ public class TextTransformerController {
         logger.debug(data.getText());
         logger.debug(Arrays.toString(data.getTransforms()));
 
-        // perform the transformation, you should run your logic here, below is just a silly example
         TextTransformer transformer = new TextTransformer(data.getTransforms());
         data.setReturn_val(transformer.transform(data.getText()));
         return EntityModel.of(data,
