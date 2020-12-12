@@ -1,3 +1,10 @@
-/home/mateusz/nauka/studia/IO/8/ioprojectarchitecture/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/rest/TextTransformerController.java
-/home/mateusz/nauka/studia/IO/8/ioprojectarchitecture/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/app/TextTransformerApplication.java
-/home/mateusz/nauka/studia/IO/8/ioprojectarchitecture/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/logic/TextTransformer.java
+/home/mateusz/nauka/studia/IO/text-transformer/src/main/java/pl/put/poznan/transformer/logic/StringToShortcut.java
+/home/mateusz/nauka/studia/IO/text-transformer/src/main/java/pl/put/poznan/transformer/logic/Lower.java
+/home/mateusz/nauka/studia/IO/text-transformer/src/main/java/pl/put/poznan/transformer/logic/TransformationNotFoundAdvice.java
+/home/mateusz/nauka/studia/IO/text-transformer/src/main/java/pl/put/poznan/transformer/app/TextTransformerApplication.java
+/home/mateusz/nauka/studia/IO/text-transformer/src/main/java/pl/put/poznan/transformer/logic/Upper.java
+/home/mateusz/nauka/studia/IO/text-transformer/src/main/java/pl/put/poznan/transformer/logic/DataContener.java
+/home/mateusz/nauka/studia/IO/text-transformer/src/main/java/pl/put/poznan/transformer/logic/TextTransformer.java
+/home/mateusz/nauka/studia/IO/text-transformer/src/main/java/pl/put/poznan/transformer/logic/Transformer.java
+/home/mateusz/nauka/studia/IO/text-transformer/src/main/java/pl/put/poznan/transformer/logic/TransformationNotFoundException.java
+/home/mateusz/nauka/studia/IO/text-transformer/src/main/java/pl/put/poznan/transformer/rest/TextTransformerController.java
