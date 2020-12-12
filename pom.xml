@@ -13,12 +13,22 @@
 
     <groupId>pl.put.poznan</groupId>
     <artifactId>text-transformer</artifactId>
+    <name>Text Transformer</name>
     <version>v0.1</version>
 
 	<properties>
         <java.version>11</java.version>
     </properties>
 
+    <build>
+	<finalName>text-transformer</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
     
     <dependencies>
         <dependency>
@@ -45,14 +55,7 @@
     </dependencies>
 
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+    
 
     <repositories>
         <repository>
