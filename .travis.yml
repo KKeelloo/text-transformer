@@ -3,6 +3,7 @@ notifications:
   email:
     recipients:
       - mateuszollek@gmail.com
+      - matylaolga@gmail.com
       #uzupełnijcie tutaj
     on_success: never # default: change
     on_failure: always # default: always
