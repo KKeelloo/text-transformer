@@ -7,3 +7,9 @@ notifications:
       #uzupełnijcie tutaj
     on_success: never # default: change
     on_failure: always # default: always
+deploy:
+  provider: releases
+  file: text-transformer.jar
+  skip_cleanup: true
+  on:
+    tags: true
