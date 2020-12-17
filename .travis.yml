@@ -9,7 +9,7 @@ notifications:
     on_failure: always # default: always 
     
 before_deploy:
-  -"mvn -DskipTests package"
+  - "mvn -DskipTests package"
 
 deploy:
   provider: releases
