@@ -10,5 +10,4 @@ notifications:
 deploy:
   provider: releases
   api_key: $github_token
-  file: text-transformer.jar
   skip_cleanup: true
