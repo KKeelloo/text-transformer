@@ -16,6 +16,12 @@ public class TextTransformer implements Transformer{
             case "lower":
                 transformation = new Lower(transforms, 1);
                 break;
+            case "short2str":
+                transformation = new ShortcutToString(transforms, 1);
+                break;
+            case "str2short":
+                transformation = new StringToShortcut(transforms, 1);
+                break;
             default:
                 throw new TransformationNotFoundException(transforms[0]);
         }
@@ -28,6 +34,12 @@ public class TextTransformer implements Transformer{
                     break;
                 case "lower":
                     transformation = new Lower(transforms, i + 1);
+                    break;
+                case "short2str":
+                    transformation = new ShortcutToString(transforms, i + 1);
+                    break;
+                case "str2short":
+                    transformation = new StringToShortcut(transforms, i + 1);
                     break;
                 default:
                     throw new TransformationNotFoundException(transforms[i]);
