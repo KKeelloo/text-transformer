@@ -9,5 +9,6 @@ notifications:
     on_failure: always # default: always
 deploy:
   provider: releases
+  api_key: $github_token
   file: text-transformer.jar
   skip_cleanup: true
