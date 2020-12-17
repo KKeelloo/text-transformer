@@ -1,4 +1,4 @@
-language: Java
+language: java
 notifications:
   email:
     recipients:
@@ -6,11 +6,15 @@ notifications:
       - matylaolga@gmail.com
       #uzupełnijcie tutaj
     on_success: never # default: change
-    on_failure: always # default: always
+    on_failure: always # default: always 
+    
+before_deploy:
+  -"mvn -DskipTests package"
+
 deploy:
   provider: releases
   api_key: $github_token
   skip_cleanup: true
-  app: text-transformer
+  file: target/text-transformer.jar
   on:
     tags: true
