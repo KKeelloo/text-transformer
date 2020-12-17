@@ -11,5 +11,6 @@ deploy:
   provider: releases
   api_key: $github_token
   skip_cleanup: true
+  app: text-transformer
   on:
     tags: true
