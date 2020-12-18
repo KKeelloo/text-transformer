@@ -1130,7 +1130,7 @@
 										},
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAF2dryuqFu/+Xg=",
+											"_id": "AAAAAAF2dsGl1Rx9Gkw=",
 											"_parent": {
 												"$ref": "AAAAAAF2NGyMCyg5lCg="
 											},
@@ -3564,26 +3564,17 @@
 						{
 							"_type": "UMLOperation",
 							"_id": "AAAAAAF2dryuK1u8X5I=",
-							"_parent": {
-								"$ref": "AAAAAAF2NGyMCigwDqs="
-							},
 							"name": "isNumeric",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
 									"_id": "AAAAAAF2dr1cEFvbD4k=",
-									"_parent": {
-										"$ref": "AAAAAAF2dryuK1u8X5I="
-									},
 									"name": "str",
 									"type": "String"
 								},
 								{
 									"_type": "UMLParameter",
 									"_id": "AAAAAAF2dr1cEFvccVQ=",
-									"_parent": {
-										"$ref": "AAAAAAF2dryuK1u8X5I="
-									},
 									"type": "bool",
 									"direction": "return"
 								}
