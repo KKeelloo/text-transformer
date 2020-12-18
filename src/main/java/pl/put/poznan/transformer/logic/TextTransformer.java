@@ -22,6 +22,9 @@ public class TextTransformer implements Transformer{
             case "str2short":
                 transformation = new StringToShortcut(transforms, 1);
                 break;
+            case "up2k":
+                transformation = new Up2kTransform(transforms, 1);
+                break;
             default:
                 throw new TransformationNotFoundException(transforms[0]);
         }
@@ -40,6 +43,9 @@ public class TextTransformer implements Transformer{
                     break;
                 case "str2short":
                     transformation = new StringToShortcut(transforms, i + 1);
+                    break;
+                case "up2k":
+                    transformation = new Up2kTransform(transforms, i + 1);
                     break;
                 default:
                     throw new TransformationNotFoundException(transforms[i]);
