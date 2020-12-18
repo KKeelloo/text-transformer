@@ -99,9 +99,7 @@ public class Up2kTransform extends TextTransformer{
                 }else if(setki != 0){
                     transform[i] = nazwaSetki[setki / 100] + " " + transform[i];
                 }
-
             }
-
         }
         text = String.join(" ", transform);
 
