@@ -7,7 +7,10 @@ notifications:
       #uzupełnijcie tutaj
     on_success: never # default: change
     on_failure: always # default: always 
-    
+
+after_success:
+- mvn site
+
 before_deploy:
   - "mvn -DskipTests package"
 
