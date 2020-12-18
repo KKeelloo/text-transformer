@@ -1,5 +1,8 @@
 package pl.put.poznan.transformer.logic;
 
+
+import java.util.Arrays;
+
 /**
  * Klasa Up2kTransform sluzaca do transformacji liczb do 999 na tekst
  *
@@ -28,6 +31,27 @@ public class Up2kTransform extends TextTransformer{
     }
 
     /**
+     * metoda sprawdzacjąca czy podany string jest liczbą
+     *
+     * @param str
+     * @return true gdy parametr to liczba lub false gdy nie jest liczbą
+     */
+    public static boolean isNumeric(final String str) {
+
+        if (str == null || str.length() == 0) {
+            return false;
+        }
+
+        for (char c : str.toCharArray()) {
+            if (!Character.isDigit(c)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
      * Metoda sluzaca do transformacji liczby na tekst
      *
      * @param text liczba podana przez uzytkownika wczytywana jako String
@@ -35,36 +59,51 @@ public class Up2kTransform extends TextTransformer{
      */
     @Override
     public String transform(String text){
-        number = Integer.parseInt(text);
-        text = "";
+        text = super.transform(text);
 
-        //JEDNOSCI
-        jednosci = number%10;
-        System.out.println(jednosci);
-        text = nazwaJednosci[jednosci];
+        String[] transform = text.split(" ");
 
-        number -= jednosci;
+        for(int i = 0; i < transform.length; i++)
+        {
+            if(isNumeric(transform[i])){
 
-        //DZIESIATKI
-        dziesiatki = number%100;
-        System.out.println(dziesiatki);
+                number = Integer.parseInt(transform[i]);
+                transform[i] = "";
 
-        if(dziesiatki == 0){}
-        else if(dziesiatki == 10 && jednosci > 0){
-            text = nazwaNastki[jednosci];
-        }else{
-            text = nazwaDziesiatki[dziesiatki/10] + " " + text;
+                //JEDNOSCI
+                jednosci = number%10;
+                System.out.println(jednosci);
+                transform[i] = nazwaJednosci[jednosci];
+
+                number -= jednosci;
+
+                //DZIESIATKI
+                dziesiatki = number%100;
+                System.out.println(dziesiatki);
+
+                if(dziesiatki == 10 && jednosci > 0){
+                    transform[i] = nazwaNastki[jednosci];
+                }else if (dziesiatki != 0 && jednosci != 0){
+                    transform[i] = nazwaDziesiatki[dziesiatki/10] + " " + transform[i];
+                }else{
+                    transform[i] = nazwaDziesiatki[dziesiatki/10];
+                }
+
+                number -= dziesiatki;
+
+                //SETKI
+                setki = number%1000;
+                System.out.println(setki);
+                if(setki != 0 && dziesiatki == 0 && jednosci == 0){
+                    transform[i] = nazwaSetki[setki / 100];
+                }else if(setki != 0){
+                    transform[i] = nazwaSetki[setki / 100] + " " + transform[i];
+                }
+
+            }
+
         }
-
-        number -= dziesiatki;
-
-        //SETKI
-        setki = number%1000;
-        System.out.println(setki);
-        if(setki == 0){}
-        else {
-            text = nazwaSetki[setki / 100] + " " + text;
-        }
+        text = String.join(" ", transform);
 
         return text;
     }
