@@ -9,7 +9,7 @@ notifications:
     on_failure: always # default: always 
 
 after_success:
-- mvn clean site 
+- mvn --quiet clean site 
 
 before_deploy:
   - "mvn -DskipTests package"
