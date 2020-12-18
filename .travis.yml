@@ -9,7 +9,7 @@ notifications:
     on_failure: always # default: always 
 
 after_success:
-- mvn site
+- "mvn site | grep -v 'WARNING'"
 
 before_deploy:
   - "mvn -DskipTests package"
