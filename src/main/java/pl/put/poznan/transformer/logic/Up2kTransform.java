@@ -1,6 +1,7 @@
 package pl.put.poznan.transformer.logic;
 
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 /**
@@ -72,15 +73,12 @@ public class Up2kTransform extends TextTransformer{
 
                 //JEDNOSCI
                 jednosci = number%10;
-                System.out.println(jednosci);
                 transform[i] = nazwaJednosci[jednosci];
 
                 number -= jednosci;
 
                 //DZIESIATKI
                 dziesiatki = number%100;
-                System.out.println(dziesiatki);
-
                 if(dziesiatki == 10 && jednosci > 0){
                     transform[i] = nazwaNastki[jednosci];
                 }else if (dziesiatki != 0 && jednosci != 0){
@@ -93,7 +91,6 @@ public class Up2kTransform extends TextTransformer{
 
                 //SETKI
                 setki = number%1000;
-                System.out.println(setki);
                 if(setki != 0 && dziesiatki == 0 && jednosci == 0){
                     transform[i] = nazwaSetki[setki / 100];
                 }else if(setki != 0){
