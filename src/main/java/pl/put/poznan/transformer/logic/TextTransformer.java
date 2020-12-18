@@ -1,11 +1,21 @@
 package pl.put.poznan.transformer.logic;
 
 /**
- * This is just an example to show that the logic should be outside the REST service.
+ * Klasa będąca podstawą do przetwarzania tekstu.
+ * Przetwarzanie następuje od ostatniej trasformacji podaniej w sekwencji do pierwszej.
  */
 public class TextTransformer implements Transformer{
-
+    /**
+     * transformacja do wykonania
+     */
     private Transformer transformation;
+
+    /**
+     *
+     * Konstruktor, przypisze do pola transformation transformację z indeksu 0 parametru transforms
+     *
+     * @param transforms tablica Stringów zawierające wszystkie transformacje które należy wykonać
+     */
 
     public TextTransformer(String[] transforms){
 
@@ -29,6 +39,15 @@ public class TextTransformer implements Transformer{
                 throw new TransformationNotFoundException(transforms[0]);
         }
     }
+
+    /**
+     *
+     * Konstruktor, przypisze do pola transformation transformację z indeksu i parametru transforms
+     *
+     * @param transforms tablica Stringów zawierające wszytkie transformacje które należy wykonać
+     * @param i wskazuje na indeks wcześniejszej transformacji do wykonania (czyli bliższej końca sekwencji)
+     */
+
     public TextTransformer(String[] transforms, int i){
         if(i < transforms.length) {
             switch (transforms[i]) {
@@ -53,9 +72,16 @@ public class TextTransformer implements Transformer{
         }
     }
 
+    /**
+     *
+     * Wywołuje transformację z pola transformation
+     *
+     * @param text tekst do transformacji
+     * @return String zmieniony przez transformację lub niezmieniony jeśli to pole jest równe null
+     */
+
     @Override
     public String transform(String text){
-        // of course, normally it would do something based on the transforms
         if (transformation != null)
             return transformation.transform(text);
         return text;

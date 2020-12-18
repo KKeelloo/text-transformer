@@ -1,11 +1,21 @@
 package pl.put.poznan.transformer.logic;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
+/**
+ * Klasa wykorzystywana do przechowywania danych i zmiany wejscia z jsona, wyjścia na json
+ */
 
 public class DataContener {
+    /**
+     * Pole zawierające tekst do zmiany
+     */
     private String text;
+    /**
+     * Pole zawierające transformacje do wykonania
+     */
     private String[] transforms;
+    /**
+     * Pole zawierające wartość otrzymaną w wyniku transformacji
+     */
     private String return_val;
     public void setText(String text) {
         this.text = text;

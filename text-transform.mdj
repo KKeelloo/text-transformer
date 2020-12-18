@@ -3546,6 +3546,88 @@
 							}
 						}
 					],
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF2dtueJ098QAQ=",
+							"_parent": {
+								"$ref": "AAAAAAF2NGyMCigwDqs="
+							},
+							"name": "number",
+							"visibility": "private",
+							"type": "int"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF2dtv9ME/KfXI=",
+							"_parent": {
+								"$ref": "AAAAAAF2NGyMCigwDqs="
+							},
+							"name": "jednosci",
+							"visibility": "private",
+							"type": "int"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF2dtwIiE/oAGA=",
+							"_parent": {
+								"$ref": "AAAAAAF2NGyMCigwDqs="
+							},
+							"name": "dziesiatki",
+							"visibility": "private",
+							"type": "int"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF2dtwY/FAGtpM=",
+							"_parent": {
+								"$ref": "AAAAAAF2NGyMCigwDqs="
+							},
+							"name": "setki",
+							"visibility": "private",
+							"type": "int"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF2dt3q0FGVpcs=",
+							"_parent": {
+								"$ref": "AAAAAAF2NGyMCigwDqs="
+							},
+							"name": "nazwaJednosci",
+							"visibility": "package",
+							"type": "String[]"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF2dt37alGz3IY=",
+							"_parent": {
+								"$ref": "AAAAAAF2NGyMCigwDqs="
+							},
+							"name": "nazwaNastki",
+							"visibility": "package",
+							"type": "String[]"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF2dt4IlFHRgkU=",
+							"_parent": {
+								"$ref": "AAAAAAF2NGyMCigwDqs="
+							},
+							"name": "nazwaDziesiatki",
+							"visibility": "package",
+							"type": "String[]"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF2dt4utVHvG6s=",
+							"_parent": {
+								"$ref": "AAAAAAF2NGyMCigwDqs="
+							},
+							"name": "nazwaSteki",
+							"visibility": "package",
+							"type": "String[]"
+						}
+					],
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -3650,6 +3732,19 @@
 							"target": {
 								"$ref": "AAAAAAF2NDuMlRfJwco="
 							}
+						}
+					],
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF2dtqoVk8UQ8o=",
+							"_parent": {
+								"$ref": "AAAAAAF2NG9+FyoIoUY="
+							},
+							"name": "logger",
+							"visibility": "private",
+							"isStatic": true,
+							"type": "Logger"
 						}
 					],
 					"operations": [
@@ -3858,6 +3953,18 @@
 							"target": {
 								"$ref": "AAAAAAF2NDuMlRfJwco="
 							}
+						}
+					],
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF2dtis5U2yI7E=",
+							"_parent": {
+								"$ref": "AAAAAAF2NG3k1CkLwz0="
+							},
+							"name": "dict",
+							"visibility": "private",
+							"type": "Map<String,String>"
 						}
 					],
 					"operations": [
