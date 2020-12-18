@@ -19,7 +19,7 @@
     <properties>
         <java.version>11</java.version>
         <github.global.server>github</github.global.server>
-        <github.global.oauth2Token>$github_token</github.global.oauth2Token>
+        <github.global.oauth2Token>${env.github_token}</github.global.oauth2Token>
     </properties>
 
     
