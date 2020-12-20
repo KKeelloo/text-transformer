@@ -41,6 +41,9 @@ public class TextTransformer implements Transformer{
             case "ix":
                 transformation = new big_or_not_to_big(transforms, 1);
                 break;
+            case "capital":
+                transformation = new Capitalize(transforms, 1);
+                break;
             default:
                 throw new TransformationNotFoundException(transforms[0]);
         }
@@ -77,6 +80,9 @@ public class TextTransformer implements Transformer{
                     break;
                 case "ix":
                     transformation = new big_or_not_to_big(transforms, i + 1);
+                    break;
+                case "capital":
+                    transformation = new Capitalize(transforms, i + 1);
                     break;
                 default:
                     throw new TransformationNotFoundException(transforms[i]);
