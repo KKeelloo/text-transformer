@@ -42,7 +42,7 @@ public class TextTransformer implements Transformer{
                 transformation = new big_or_not_to_big(transforms, 1);
                 break;
             case "capital":
-                transformation = new Capitalize(transforms, i);
+                transformation = new Capitalize(transforms, 1);
                 break;
             case "dd":
                 transformation = new Dzies(transforms, 1);
