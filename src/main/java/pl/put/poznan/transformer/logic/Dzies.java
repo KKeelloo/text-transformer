@@ -7,19 +7,14 @@ import org.springframework.core.ReactiveAdapterRegistry;
 import java.util.Arrays;
 
 /**
- * Klasa implementująca metodę do zmiany tekstu na duże litery
+ * Klasa implementująca metodę do zmiany liczb zmiennoprzzcinkowych na słowa
  */
 
 public class Dzies extends TextTransformer{
-
-
-
+    
     public Dzies(String[] transforms, int i){
         super(transforms,i);
     }
-
-
-
 
 
     private static final Logger logger = LoggerFactory.getLogger(Dzies.class);
@@ -33,12 +28,12 @@ public class Dzies extends TextTransformer{
         {
             if (Dzies.floating(text[i])){
                 ww = Dzies.numero(text[i]);
+                text[i] = ww;
             }
-
         }
-        //logger.debug(Arrays.toString(text));
-        //transforms = String.join(" ", text);
-        return ww;
+        logger.debug(Arrays.toString(text));
+        transforms = String.join(" ", text);
+        return transforms;
     }
 
 
