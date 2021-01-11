@@ -5,6 +5,8 @@
 <p> product backlog https://trello.com/invite/b/15KNs0tV/76e82d842866083876c495132f5287e7/product-backlog</p>
 <p> to samo ale na arkuszach https://docs.google.com/spreadsheets/d/1SpuWzbr01__hUy8QHNQFRUa9fmH0D0Xz/edit#gid=1072210809 </p>
 <p> dokumentacja https://kkeelloo.github.io/text-transformer/index.html </p>
+<p> retrospekcja https://padlet.com/mateuszollek/rwz74ydkh5g3169d </p>
+<p> jedynym znalezionym problemem były narzędzia do zarządzania backlogiem, teraz używane jedynie github issues </p>
 <p> wspierane operacje </p>
 <ol>
 <li>Zmiana na duże litery - 'upper'</li>
