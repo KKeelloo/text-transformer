@@ -108,9 +108,6 @@ public class TextTransformer implements Transformer{
      * @param text tekst do transformacji
      * @return String zmieniony przez transformację lub niezmieniony jeśli to pole jest równe null
      */
-
-
-
     @Override
     public String transform(String text){
         if (transformation != null)
