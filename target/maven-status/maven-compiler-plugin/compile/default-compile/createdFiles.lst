@@ -3,7 +3,11 @@ pl\put\poznan\transformer\logic\Upper.class
 pl\put\poznan\transformer\rest\TransformationNotFoundAdvice.class
 pl\put\poznan\transformer\logic\TransformationNotFoundException.class
 pl\put\poznan\transformer\logic\Transformer.class
+pl\put\poznan\transformer\logic\Dzies.class
+pl\put\poznan\transformer\logic\Capitalize.class
 pl\put\poznan\transformer\app\TextTransformerApplication.class
+pl\put\poznan\transformer\logic\Repeated.class
+pl\put\poznan\transformer\logic\big_or_not_to_big.class
 pl\put\poznan\transformer\rest\ErrorInfo.class
 pl\put\poznan\transformer\rest\TextTransformerController.class
 pl\put\poznan\transformer\logic\ShortcutToString.class

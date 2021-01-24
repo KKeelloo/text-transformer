@@ -33,6 +33,7 @@ public class Dzies extends TextTransformer{
         }
         logger.debug(Arrays.toString(text));
         transforms = String.join(" ", text);
+        transforms = transforms.trim().replaceAll(" +", " ");
         return transforms;
     }
 
