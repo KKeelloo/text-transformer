@@ -31,4 +31,8 @@ public class ShortcutToString extends TextTransformer{
         transforms = String.join(" ", text);
         return transforms;
     }
+    @Override
+    public void setTransformation(Transformer transformation){
+        super.setTransformation(transformation);
+    }
 }
