@@ -47,7 +47,9 @@ public class TextTransformer implements Transformer{
             case "dd":
                 transformation = new Dzies(transforms, 1);
                 break;
-
+            case "latex":
+                transformation = new Latex(transforms, 1);
+                break;
             default:
                 throw new TransformationNotFoundException(transforms[0]);
         }
@@ -91,6 +93,10 @@ public class TextTransformer implements Transformer{
                 case "dd":
                     transformation = new Dzies(transforms, i + 1);
                     break;
+                case "latex":
+                    transformation = new Latex(transforms, i + 1);
+                    break;
+
                 default:
                     throw new TransformationNotFoundException(transforms[i]);
             }
