@@ -20,36 +20,49 @@ public class Latex extends TextTransformer{
         transforms = super.transform(transforms);
         String[] text = transforms.split(" ");
         String[] chars = {"#" ,"$" ,"%" ,"&", "~" ,"_","^",  "{", "}"};
+        List<String> namesList = Arrays.asList( "#" ,"$" ,"%" ,"&", "~" ,"_","^",  "{", "}");
+        ArrayList<String> chrr = new ArrayList<String>();
+        chrr.addAll(namesList);
         logger.debug(Arrays.toString(text));
-        StringBuilder wynik = new StringBuilder();
+
         int kk = text.length;
-        for(int i = 0; i < kk  ; i++)
-        {
-            if(text[i].length() == 1){
-                for (String aChar : chars) {
-                    if (text[i].equals(aChar)) {
-                        text[i] = "" + "/" + text[i];
-
-
-                    }
 
 
 
+        for(int i = 0; i < kk  ; i++) {
+            String ww = "";
+            for (char c : text[i].toCharArray()) {
+                String s = String.valueOf(c);
+                boolean cont = chrr.contains(s);
+                if (cont) {
+                    ww = ww + "\\" + c;
                 }
-
-            }
-
-
-
+                else{
+                    ww = ww + c;
+                }
+                    }
+            text[i] = ww;
 
 
 
 
         }
+        String wynik = "";
+        for (String s : text) {
+            wynik = wynik + " " + s;
 
+
+        }
+
+
+
+
+        //wynik  = wynik.replaceAll("\\\\" , "\\");
+        System.out.print(wynik);
         logger.debug(Arrays.toString(text));
-        transforms = String.join(" ", text);
+        transforms = String.join(">", text);
 
-        return transforms.toString();
+
+        return (wynik);
     }
 }
