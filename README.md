@@ -7,5 +7,6 @@ Dla osób pracujących z danymi tekstowymi nasza aplikacja Text Transformer umo�
  * Java 11
  * Spring Boot 2.3.8
  * Travis
+ * JUnit
 ## Info
 Stworzone w ramach zajęć Inżynieria Oprogramowania na Politechnice Poznańskiej.
